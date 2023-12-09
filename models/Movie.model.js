@@ -1,7 +1,10 @@
 const mongoose = require('mongoose'); // necessary for creating the schema
 
 const movieSchema= new mongoose.Schema({
-    title: String,
+    title: {
+        type: String,
+        unique: true,
+    },
     director: String,
     stars: [String],
     image: String,
